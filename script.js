@@ -17,11 +17,10 @@ postObject = async(myObject)=>{
                 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2M5MzVjZmU3MzczODAwMTUzNzQzNzkiLCJpYXQiOjE2NzQxMzA4OTUsImV4cCI6MTY3NTM0MDQ5NX0.Lhwgk1EUUirn_mddnwsquUI0rwmcT740RTl3AXgqUL0'
             }
         })
-        res = await res.json();
-        console.log(res);
-        getArrayofObjects();
         if(res.ok) {
-            successAlert()
+            res = await res.json();
+            console.log(res);
+            getArrayofObjects();
           } else {
             throw res.status + " " + res.statusText
           }  
@@ -39,11 +38,10 @@ putItem = async(object,id)=>{
                 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2M5MzVjZmU3MzczODAwMTUzNzQzNzkiLCJpYXQiOjE2NzQxMzA4OTUsImV4cCI6MTY3NTM0MDQ5NX0.Lhwgk1EUUirn_mddnwsquUI0rwmcT740RTl3AXgqUL0'
             }
         })
-        res = await res.json();
-        console.log(res);
-        getArrayofObjects();
         if(res.ok) {
-            successAlert()
+            res = await res.json();
+            console.log(res);
+            getArrayofObjects();
           } else {
             throw res.status + " " + res.statusText
           }  
@@ -122,15 +120,17 @@ renderObjects = (objects)=>{
     displayItems.innerHTML="";
     objects.forEach(item=>{
         displayItems.innerHTML+=`
-        <div class="card col-lg-3 col-md-4 col-sm-6 col-12">
-            <img class="card-img-top" src="${item.imageUrl}" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">${item.name}</h5>
-                <p class="card-text">${item.brand}</p>
-                <p class="card-text">${item.description}</p>
-                <p class="card-text">£${item.price}</p>
-                <a class="btn btn-primary" onclick="editItem('${item._id}','${item.name}','${item.description}','${item.brand}','${item.price}','${item.imageUrl}')">Edit</a>
-                <a class="btn btn-danger" onclick="deleteItem('${item._id}')">Delete</a>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+            <div class="card">
+                <img class="card-img-top" src="${item.imageUrl}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">${item.name}</h5>
+                    <p class="card-text">${item.brand}</p>
+                    <p class="card-text">${item.description}</p>
+                    <p class="card-text">£${item.price}</p>
+                    <a class="btn btn-primary" onclick="editItem('${item._id}','${item.name}','${item.description}','${item.brand}','${item.price}','${item.imageUrl}')">Edit</a>
+                    <a class="btn btn-danger" onclick="deleteItem('${item._id}')">Delete</a>
+                </div>
             </div>
         </div>
 `
@@ -141,13 +141,15 @@ renderObjectsHome = (objects)=>{
     homeProducts.innerHTML="";
     objects.forEach(item=>{
         homeProducts.innerHTML+=`
-        <div class="card col-lg-3 col-md-4 col-sm-6 col-12">
-            <img class="card-img-top" src="${item.imageUrl}" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">${item.name}</h5>
-                <p class="card-text">${item.brand}</p>
-                <p class="card-text">${item.description}</p>
-                <p class="card-text">£${item.price}</p>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+            <div class="card">
+                <img class="card-img-top" src="${item.imageUrl}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">${item.name}</h5>
+                    <p class="card-text">${item.brand}</p>
+                    <p class="card-text">${item.description}</p>
+                    <p class="card-text">£${item.price}</p>
+                </div>
             </div>
         </div>
 `
