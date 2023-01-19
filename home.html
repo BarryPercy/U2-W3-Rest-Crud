@@ -26,82 +26,21 @@
         <div class="container">
             <div class="jumbotron">
                 <div class="display-4">
-                    Shopping Business Item Control
+                    Welcome to Shop
                 </div>
                 <div class="lead">
-                    Use this page to add/remove or edit our products we sell.
+                    Here are our Current Products!
                 </div>
             </div>
         </div>
     </header>
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <button type="button" class="btn btn-danger" onclick="deleteAllItems()">Delete All Items</button>
+    <main>
+        <div class="container">
+            <div class="row" id="products-here">
             </div>
         </div>
-        <hr>
-        <div class="row">
-            <div class="col-6">
-                <h2>Add a New Item</h2>
-                <form>
-                    <div class="form-group">
-                        <label for="name-of-item">Name Of Item</label>
-                        <input type="text" class="form-control" id="post-name">
-                    </div>
-                    <div class="form-group">
-                        <label for="description">Description</label>
-                        <input type="text" class="form-control" id="post-description">
-                    </div>
-                    <div class="form-group">
-                        <label for="brand">Brand</label>
-                        <input type="text" class="form-control" id="post-brand">
-                    </div>
-                    <div class="form-group">
-                        <label for="price">Price</label>
-                        <input type="text" class="form-control" id="post-price">
-                    </div>
-                    <div class="form-group">
-                        <label for="image-url">Image URL</label>
-                        <input type="text" class="form-control" id="post-image">
-                    </div>
-                </form>
-                <button type="button" class="btn btn-primary" onclick="getObject()">Submit</button>
-            </div>
-            <div class="col-6">
-                <h2>Edit an Item</h2>
-                <form>
-                    <div class="form-group">
-                        <label for="id">ID</label>
-                        <input type="text" class="form-control" id="edit-id">
-                    </div>
-                    <div class="form-group">
-                        <label for="name-of-item">Name Of Item</label>
-                        <input type="text" class="form-control" id="edit-name">
-                    </div>
-                    <div class="form-group">
-                        <label for="description">Description</label>
-                        <input type="text" class="form-control" id="edit-description">
-                    </div>
-                    <div class="form-group">
-                        <label for="brand">Brand</label>
-                        <input type="text" class="form-control" id="edit-brand">
-                    </div>
-                    <div class="form-group">
-                        <label for="price">Price</label>
-                        <input type="text" class="form-control" id="edit-price">
-                    </div>
-                    <div class="form-group">
-                        <label for="image-url">Image URL</label>
-                        <input type="text" class="form-control" id="edit-image">
-                    </div>
-                </form>
-                <button type="button" class="btn btn-primary" onclick="editObject()">Submit</button>
-            </div>
-        </div>
-        <div class="row" id="display-items">
-        </div>
-    </div>
+    </main>
+    
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -111,7 +50,7 @@
       integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
       crossorigin="anonymous">
     </script>
-    <script src="script.js">
+    <script src="homescript.js">
     </script>
   </body>
 </html>

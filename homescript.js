@@ -26,7 +26,9 @@ postObject = async(myObject)=>{
             throw res.status + " " + res.statusText
           }  
 
-    }catch(error){}
+    }catch(error){
+        console.log(error);
+    }
 }
 
 putItem = async(object,id)=>{
@@ -111,7 +113,6 @@ getArrayofObjects = async()=>{
             arrayOfIds.push(item._id)
         });
         console.log(res);
-        renderObjects(res);
         renderObjectsHome(res);
     }catch(error){
         console.log(error);
