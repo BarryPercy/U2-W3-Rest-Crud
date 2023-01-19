@@ -65,8 +65,9 @@
                         <label for="image-url">Image URL</label>
                         <input type="text" class="form-control" id="post-image">
                     </div>
+                    <button type="button" class="btn btn-primary" onclick="getObject()">Submit</button>
                 </form>
-                <button type="button" class="btn btn-primary" onclick="getObject()">Submit</button>
+                
             </div>
             <div class="col-6">
                 <h2>Edit an Item</h2>
@@ -95,10 +96,12 @@
                         <label for="image-url">Image URL</label>
                         <input type="text" class="form-control" id="edit-image">
                     </div>
+                    <button type="button" class="btn btn-primary" onclick="editObject()">Submit</button>
                 </form>
-                <button type="button" class="btn btn-primary" onclick="editObject()">Submit</button>
+                
             </div>
         </div>
+        <hr>
         <div class="row" id="display-items">
         </div>
     </div>
